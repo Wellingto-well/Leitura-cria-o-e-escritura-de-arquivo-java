@@ -33,6 +33,42 @@ public class Arquivos {
         }catch(Exception e){
             System.out.println("Erro!");
         }
+    }
+       
+    public static void readerFile(String path){
+    
+    try{
+        
+        FileReader arq = new FileReader(path);
+        Scanner scr = new Scanner(arq);
+        
+        while(scr.hasNextLine()){
+            String linha = scr.nextLine();
+            System.out.println(linha);
+        }
+        
+    }catch(Exception e){
+        System.out.println("erro!");
+    }
+    
+}
+   
+    public static void deliteFile(String path){
+        try{
+            
+            File arq = new File(path);
+            if(arq.delete()){
+                System.out.println("arquivo apagado"+arq.getName());
+            }else{
+                System.out.println("nao consegui apagar");
+            }
+            
+        }catch(Exception e){
+            System.out.println("ERRO!");
+        }
+    }
+    
+}
         
         ----------------------------------------------------------------
         
