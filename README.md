@@ -82,6 +82,7 @@ public class ManipularArquivo {
         arq.createFile(path);
         arq.writeFile(path, texto);
         arq.readerFile(path);
+        arq.deliteFile(path);
     }
     
 }
